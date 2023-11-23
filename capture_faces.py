@@ -12,7 +12,7 @@ known_persons_directory = "known_persons/"
 known_face_encodings = []
 known_face_names = []
 recognized_data = pd.DataFrame()
-
+detected_names = set()
 # Initialize variables for face recognition
 face_locations = []
 face_encodings = []
@@ -22,7 +22,7 @@ face_names = []
 recognized_data = pd.DataFrame(columns=["Name", "Timestamp"])
 
 # Reading the csv
-crime_history = pd.read_csv('C:/Users/NISHANT/Desktop/face reco/crime_history_samples.csv')
+crime_history = pd.read_csv('C:/Users/NISHANT/Desktop/Face_Recognition/crime_history_samples.csv')
 
 
 def image_to_encoding(filename):
@@ -71,8 +71,21 @@ while True:
         confidence_scores.append(confidence_score)
         person_crime_history = crime_history[crime_history['Name'] == name]
         if not person_crime_history.empty and person_crime_history['Punishment Completed'].values[0] == 'No':
-            print(f"Crime history of {name}:")
-            print(person_crime_history)
+        # Check if the name is already detected
+            if name not in detected_names:
+                print(f"Crime history of {name}:")
+                print(f"Name: {person_crime_history['Name'].values[0]}")
+                print(f"Father Name: {person_crime_history['Father Name'].values[0]}")
+                print(f"DOB: {person_crime_history['DOB'].values[0]}")
+                print(f"Crime Recorded Data: {person_crime_history['Crime recorded Date'].values[0]}")
+                print(f"Type of crime: {person_crime_history['Type of crime'].values[0]}")
+                print(f"Remarks: {person_crime_history['Remarks'].values[0]}")
+                print(f"Arrestment/Fine: {person_crime_history['Arrestment/Fine'].values[0]}")
+                print(f"Punishment Completed: {person_crime_history['Punishment Completed'].values[0]}")
+                print(f"Date of completion: {person_crime_history['Date of Completion'].values[0]}")
+                # Add the name to the detected names set
+                detected_names.add(name)
+
     # Draw rectangles, labels, and confidence scores on the frame
     for (top, right, bottom, left), name, confidence_score in zip(face_locations, face_names, confidence_scores):
         top *= 4
