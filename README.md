@@ -1,4 +1,4 @@
-# Face Recognitition Using Python
+# Face Recognitition Using Python for Windows
 ## This repository contains a project for facial detection and face recognition using Python 3.9
 ## Start using this Project
 ### Download all files in zip
