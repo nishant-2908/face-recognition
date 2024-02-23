@@ -2,9 +2,9 @@
 ## This repository contains a project for facial detection and face recognition using Python 3.9
 ## Start using this Project
 ### Download all files in zip
-### Uninstall the existing version of python and install the Python 3.9 (https://www.python.org/downloads/release/python-390)
+### Uninstall the existing version of python and install the [Python 3.9](https://www.python.org/downloads/release/python-390)
 ### Open terminal in the extracted folder and run the following commands
-`pip install opencv-python dlib-19.22.99-cp39-cp39-win_amd64.whl face_recognition pandas`
+`pip install opencv-python dlib-19.22.99-cp39-cp39-win_amd64.whl face_recognition pandas numpy`
 ### Create a subfolder named `known_persons` in the same level as that of `capture_faces.py`
 ### Add some photos into the directory (Caution: Do not add photos of a same person multiple times, one user one photo)
 ### Open the `crime_history_samples.csv` in your desired CSV editor
