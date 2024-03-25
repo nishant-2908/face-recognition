@@ -5,7 +5,7 @@
 - Uninstall the existing version of python and install the [Python 3.11](https://www.python.org/downloads/release/python-390)
 - Download the `dlib` python package from [here](https://github.com/eddiehe99/dlib-whl/blob/main/dlib-19.24.1-cp311-cp311-win_amd64.whl)
 - Open terminal in the extracted folder and run the following commands
-`pip install opencv-python dlib-19.24.1-cp311-cp311-win_amd64.whl face_recognition pandas numpy`
+`pip install -r requirements.txt`
 - Create a subfolder named `known_persons` in the same level as that of `capture_faces.py`  
 - Add some photos into the directory (Caution: Do not add photos of a same person multiple times, one user one photo)  
   
