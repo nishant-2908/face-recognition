@@ -11,7 +11,7 @@
   
 - Open the `crime_history_samples.csv` in your desired CSV editor  
   
-- Add some sample data according to your wish (Caution: The names mentioned in the first column of `crime_history_samples.csv` i.e. `Names` should match with the name of photo in the `known_persons` directory.  
+- Add some sample data according to your wish (Caution: The names mentioned in the first column of `crime_history_samples.csv` i.e. `Names` should match with the name of photo in the `known_persons` directory).  
   
 - Run the `capture_faces.py` by executing the command `python capture_faces.py` in the extracted folder.  
 ### Caution: only use `.jpg` or `.png` pictures
